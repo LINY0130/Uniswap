@@ -1,0 +1,11 @@
+import { Currency } from '@uniswap/sdk-core';
+import { Pair } from '@uniswap/v2-sdk';
+import { Pool as V3Pool } from '@uniswap/v3-sdk';
+import { Pool as V4Pool } from '@uniswap/v4-sdk';
+import { RouteWithValidQuote } from '../routers/alpha-router';
+import { SupportedRoutes } from '../routers/router';
+export declare const routeToTokens: (route: SupportedRoutes) => Currency[];
+export declare const routeToPools: (route: SupportedRoutes) => (V4Pool | V3Pool | Pair)[];
+export declare const poolToString: (pool: V4Pool | V3Pool | Pair) => string;
+export declare const routeToString: (route: SupportedRoutes) => string;
+export declare const routeAmountsToString: (routeAmounts: RouteWithValidQuote[]) => string;
